@@ -49,13 +49,6 @@ export function removeParagraph() {
   }
 }
 
-// ---------------Взаимодействие с полем input----------------
-export function inputBehavior(event, inputEl) {
-  if (!event.code === "ControlLeft") {
-    inputEl.addEventListener("input", buttonBehavior);
-  }
-}
-
 // ---------------- Обработчики -------------------
 
 export function addListenersCLickToButtonEl() {
