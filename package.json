@@ -1,0 +1,20 @@
+{
+  "name": "otus-jsbasic-hw4",
+  "version": "1.0.0",
+  "description": "Данный репозиторий создан для решения ДЗ №4: описать тестовые сценарии для задачи про параграфы.",
+  "homepage": "https://github.com/Gottard-capricorn/otus-jsBasic-hw4#readme",
+  "bugs": {
+    "url": "https://github.com/Gottard-capricorn/otus-jsBasic-hw4/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gottard-capricorn/otus-jsBasic-hw4.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
