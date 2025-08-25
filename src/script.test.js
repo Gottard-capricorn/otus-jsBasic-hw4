@@ -91,7 +91,7 @@ describe("Checking the behavior of the functions", () => {
     expect(document.querySelector(".Paragraph").hidden).toBe(false);
   });
 
-  it("addParagraph() should increase ul length by 1 ", () => {
+  it("addParagraph() should increase ul length by 1", () => {
     expect(document.querySelector(".Paragraph").hidden).toBe(false);
     buttonBehavior();
     expect(document.querySelector(".text-field").value).toBe("");
