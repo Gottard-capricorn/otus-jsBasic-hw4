@@ -16,16 +16,25 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   },
   "lint-staged": {
-  "src/**/*.js": "eslint"
+    "src/**/*.js": "eslint"
   },
   "devDependencies": {
     "@babel/core": "^7.28.3",
     "@babel/preset-env": "^7.28.3",
+    "@eslint/css": "^0.10.0",
+    "@eslint/js": "^9.34.0",
+    "@eslint/json": "^0.13.1",
+    "@eslint/markdown": "^7.2.0",
     "@types/jest": "^30.0.0",
     "babel-jest": "^30.0.5",
+    "eslint": "^9.34.0",
+    "eslint-plugin-jest": "^29.0.1",
+    "globals": "^16.3.0",
     "husky": "^9.1.7",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
