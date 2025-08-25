@@ -18,10 +18,16 @@ const config = {
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  // collectCoverage: false,
+  collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: undefined,
+  collectCoverageFrom: [
+    '**/*.{js,jsx}', //подтягиваются все файлы из существующих директорий проекта
+    '!**/node_modules/**', //не нужно собирать покрытие с node_modules
+    '!**/*.test.js', //не нужно собирать покрытие со всех тестовых файлов
+    '!*.config.js', //не нужно собирать покрытие со всех .js конфигурационных файлов 
+    '!**/coverage/**' //не нужно собирать покрытие с папки coverage (в ней есть js файлы)
+  ],
 
   // The directory where Jest should output its coverage files
   // coverageDirectory: undefined,
@@ -43,7 +49,14 @@ const config = {
   // ],
 
   // An object that configures minimum threshold enforcement for coverage results
-  // coverageThreshold: undefined,
+  coverageThreshold: {
+   global: {
+     branches: 60,
+     functions: 60,
+     lines: 60,
+     statements: 60,
+   },
+ },
 
   // A path to a custom dependency extractor
   // dependencyExtractor: undefined,
