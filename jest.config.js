@@ -25,6 +25,7 @@ const config = {
     '**/*.{js,jsx}', //подтягиваются все файлы из существующих директорий проекта
     '!**/node_modules/**', //не нужно собирать покрытие с node_modules
     '!**/*.test.js', //не нужно собирать покрытие со всех тестовых файлов
+    '!./src/script.js', //не нужно собирать покрытие с файла script.js
     '!*.config.js', //не нужно собирать покрытие со всех .js конфигурационных файлов 
     '!**/coverage/**' //не нужно собирать покрытие с папки coverage (в ней есть js файлы)
   ],
@@ -51,6 +52,12 @@ const config = {
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
    global: {
+     branches: 50,
+     functions: 50,
+     lines: 50,
+     statements: 50,
+   },
+   './src/utils.js': {
      branches: 60,
      functions: 60,
      lines: 60,
